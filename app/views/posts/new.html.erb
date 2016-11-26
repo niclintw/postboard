@@ -1,6 +1,7 @@
 <%= render 'shared/title', title: 'New Post'%>
 <hr>
-<div class="well col-md-12">
+<div class="col-md-12">
+ <div class="well col-md-8"> 
   <%= form_for @post do |f| %>
     <div class="form-group">
       <%= f.label :title %>
@@ -22,6 +23,7 @@
   <br>
     <%= f.submit(@post.new_record? ? 'Create Post' : 'Update Post', class: 'btn btn-primary') %>
   <% end %>
+  </div>
 </div>
 
 <%= link_to 'Back to Post List', posts_path %>
